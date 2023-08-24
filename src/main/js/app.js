@@ -11,11 +11,13 @@ const EditarInstrumentos = require('./pages/Editar-Instrumento.js');
 const VerBanda = require('./pages/Ver-Banda.js');
 const NuevoIntegrante = require('./pages/Nuevo-Integrante.js');
 const VerVenta = require('./VER/VerVenta.js');
+const NuevoDetalle = require('./VNUEVO/Nuevo-Detalle.js');
 
 const router = createBrowserRouter([
 	
 	{ path:"/" , element:<HomePage/> },
-	{ path:"/verventa/:id" , element:<VerVenta/> }
+	{ path:"/verventa/:id" , element:<VerVenta/> },
+	{ path:"/verventa/:id/nuevodetalleventa",element:<NuevoDetalle/>}
 	/*{ path:"/obtener/:id", element:<ObtenerInstrumento/>},
 	{ path:"/vermusico/:id", element:<VerMusico/>},
 	{ path:"/nuevoinstrumento", element:<NuevoInstrumento/>},

@@ -1,0 +1,25 @@
+@server = https://fantastic-engine-r66rv44q6q25rvv-8080.app.github.dev
+### PRODUCTOS
+GET {{server}}/api/productos
+###
+POST {{server}}/api/productos
+Content-Type: application/json
+
+{"nombre": "Medias Paquete", "precio": 15.0}
+
+###VENTAS
+GET {{server}}/api/ventas
+###
+POST {{server}}/api/ventas
+Content-Type: application/json
+
+{"total": 25.0}
+
+### DETALLEVENTA
+GET {{server}}/api/detalleventas/1
+
+###
+GET {{server}}/api/detalleventas
+
+###
+GET {{server}}/api/ventas/1/formacion

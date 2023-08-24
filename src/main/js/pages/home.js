@@ -128,25 +128,6 @@ class ProductoList extends React.Component{
 	}
 }
 
-/*
-class MusicoList extends React.Component{
-	render() {
-		const musicos = this.props.musicos.map(musico =>
-			<Musico key={musico._links.self.href} musico={musico}/>
-		);
-		return (
-			<table border="1">
-				<tbody>
-					<tr>
-						<th>Nombre</th>
-						<th>Acciones</th>
-					</tr>
-					{musicos}
-				</tbody>
-			</table>
-		)
-	}
-}*/
 
 //PRODUCTOITEM
 class Producto extends React.Component{
@@ -159,7 +140,7 @@ class Producto extends React.Component{
 				<td>{this.props.producto.nombre}</td>
 				<td>{this.props.producto.precio}</td>
 				<td>
-					<Link to={"/obtener/"+id}>Obtener</Link>
+					<Link to={"/verproducto/"+id}>Obtener</Link>
 				</td>
 				<td>
 					<Link to={"/editarpro/"+id}>Editar</Link>
@@ -168,20 +149,5 @@ class Producto extends React.Component{
 		)
 	}
 }
-/*
-class Musico extends React.Component{
-	render() {
-		const id  = this.props.musico._links.self.href.split("/").slice(-1)
-		return (
-			<tr>
-				<td>{this.props.musico.nombre}</td>
-				<td>
-					<Link to={"/vermusico/"+id} >Ver</Link>
-				</td>
-			</tr>
-		)
-	}
-}
-*/
 
 module.exports = HomePage
